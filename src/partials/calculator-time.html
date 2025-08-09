@@ -1,0 +1,45 @@
+<section>
+  <section>
+    <div class="centered">
+      <h1>Калькулятор часу</h1>
+      <div class="input-result-row">
+        <div class="search-wrapper">
+          <input type="text" id="minutesInput" placeholder="Введіть число" />
+          <div class="search-button" onclick="convertMinutes()">
+            <img src="../img/search-icon.png" alt="search" />
+          </div>
+        </div>
+        <div class="dashed-line"></div>
+        <div id="result">3 дн. 15:45:01</div>
+      </div>
+    </div>
+  </section>
+</section>
+<script>
+  function convertMinutes() {
+    const input = document.getElementById('minutesInput').value.trim();
+    const minutesTotal = parseInt(input, 10);
+
+    if (isNaN(minutesTotal) || minutesTotal < 0) {
+      document.getElementById('result').textContent = 'Некоректне значення';
+      return;
+    }
+
+    const days = Math.floor(minutesTotal / 1440);
+    const hours = Math.floor((minutesTotal % 1440) / 60);
+    const minutes = minutesTotal % 60;
+
+    let result = '';
+
+    if (days > 0) {
+      result += `${days} дн. `;
+    }
+
+    const paddedHours = hours.toString().padStart(1, '0');
+    const paddedMinutes = minutes.toString().padStart(2, '0');
+
+    result += `${paddedHours}:${paddedMinutes}`;
+
+    document.getElementById('result').textContent = result;
+  }
+</script>
