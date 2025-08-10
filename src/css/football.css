@@ -91,3 +91,75 @@
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 14px;
+    margin: 24px;
+  }
+
+  .field {
+    width: 100%;
+    height: 180px;
+  }
+
+  .center-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ball {
+    width: 40px;
+    height: 40px;
+    top: 70px;
+    left: 70px;
+  }
+
+  .gate {
+    width: 55px;
+    height: 100px;
+    right: -15px;
+    top: 40px;
+  }
+
+  .score-board {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 12px;
+    margin: 16px;
+  }
+
+  .field {
+    height: 150px;
+  }
+
+  .center-circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ball {
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 50px;
+  }
+
+  .gate {
+    width: 40px;
+    height: 80px;
+    right: -10px;
+    top: 35px;
+  }
+
+  .score-board {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
