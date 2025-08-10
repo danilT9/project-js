@@ -31,7 +31,7 @@ input[type='number'] {
   font-weight: 400;
   font-size: 12px;
   text-align: center;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.2s;
 }
 
 input[type='number']:focus {
