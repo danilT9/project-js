@@ -1,0 +1,82 @@
+<section>
+  <div class="container">
+    <h1>Калькулятор</h1>
+
+    <div class="inputs-row">
+      <div class="input-wrapper shadow-input">
+        <input id="num1" type="text" placeholder="Введіть число" />
+      </div>
+
+      <div class="buttons-group">
+        <button class="circle-btn" onclick="setOperation('+')">+</button>
+        <button class="circle-btn" onclick="setOperation('*')">*</button>
+        <button class="circle-btn" onclick="setOperation('-')">-</button>
+        <button class="circle-btn" onclick="setOperation('/')">/</button>
+      </div>
+
+      <div class="input-wrapper shadow-input">
+        <input id="num2" type="text" placeholder="Введіть число" />
+      </div>
+
+      <button class="circle-btn" onclick="calculateResult()">=</button>
+
+      <div class="input-wrapper shadow-input result-input">
+        <input id="result" type="text" placeholder="Результат" readonly />
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  let operation = null;
+
+  function setOperation(op) {
+    operation = op;
+  }
+
+  function calculateResult() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const resultInput = document.getElementById('result');
+
+    if (isNaN(num1) || isNaN(num2)) {
+      resultInput.value = 'Введіть правильні числа';
+      return;
+    }
+
+    if (!operation) {
+      resultInput.value = 'Оберіть операцію';
+      return;
+    }
+
+    let result;
+    let operationText;
+
+    switch (operation) {
+      case '+':
+        result = num1 + num2;
+        operationText = `${num1} + ${num2} = ${result}`;
+        break;
+      case '-':
+        result = num1 - num2;
+        operationText = `${num1} - ${num2} = ${result}`;
+        break;
+      case '*':
+        result = num1 * num2;
+        operationText = `${num1} * ${num2} = ${result}`;
+        break;
+      case '/':
+        if (num2 === 0) {
+          resultInput.value = 'Ділення на 0 неможливе';
+          return;
+        }
+        result = num1 / num2;
+        operationText = `${num1} / ${num2} = ${result}`;
+        break;
+      default:
+        resultInput.value = 'Невідома операція';
+        return;
+    }
+
+    resultInput.value = operationText;
+  }
+</script>
