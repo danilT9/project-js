@@ -44,7 +44,9 @@ input[type='number']:focus {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
   font-size: 12px;
+  margin-bottom: 36px;
 }
+
 
 @media (max-width: 768px) {
   .title {
@@ -88,9 +90,8 @@ input[type='number']:focus {
   }
 
   .result {
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
     padding: 0 10px;
-    margin-bottom: 36px;
   }
 }
