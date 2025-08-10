@@ -44,4 +44,5 @@ input[type="number"]:focus {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-size: 12px;
+    margin-bottom: 36px;
 }

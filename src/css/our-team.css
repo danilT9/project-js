@@ -1,0 +1,199 @@
+.our-team {
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.team-title {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 36px;
+}
+
+.slider {
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+}
+
+.member-name {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 20px;
+}
+
+.member-info {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.arrow {
+  position: absolute;
+  top: 10%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.arrow img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.arrow.left {
+  left: -170px;
+}
+
+.arrow.right {
+  right: -170px;
+}
+
+.dashes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.dash {
+  width: 18px;
+  height: 3px;
+  background: #d9d9d9;
+  margin: 0 3px;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.dash.active {
+  background: #797979;
+}
+
+
+@media (max-width: 768px) {
+  .our-team {
+    max-width: 90%;
+    padding: 0 10px;
+  }
+
+  .slider {
+    max-width: 300px;
+  }
+
+  .member-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .member-name {
+    font-size: 13px;
+    margin: 15px 0;
+  }
+
+  .member-info {
+    font-size: 11px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .arrow.left {
+    left: -80px;
+  }
+
+  .arrow.right {
+    right: -80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-team {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .team-title {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  .slider {
+    max-width: 260px;
+  }
+
+  .slides {
+    display: flex;
+    justify-content: center;
+  }
+
+  .member-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .member-name {
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .member-info {
+    font-size: 10px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .arrow {
+    width: 25px;
+    height: 25px;
+    top: 20%;
+  }
+
+  .arrow.left {
+    left: -30px;
+  }
+
+  .arrow.right {
+    right: -30px;
+  }
+
+  .dashes {
+    margin-bottom: 24px;
+  }
+
+  .dash {
+    width: 12px;
+    height: 3px;
+  }
+}
