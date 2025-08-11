@@ -82,9 +82,11 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.birthday_search_btn img{
+.icon{
+    stroke: white;
     width: 16px;
     height: 16px;
+    stroke-width: 3;
 }
 
 @media (max-width: 768px){
