@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.container_number_guess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1.5px solid black;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+.title_number_guess {
+    font-size: 16px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.container_number_guess_inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+    gap: 202px;
+    position: relative;
+}
+.input_wraper_number_guess {
+    position: relative;
+    width: 150px;
+    height: 35px;
+}
+.input_number_guess {
+    color: #7E7E7E;
+    font-size: 12px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #D7D7D7;
+    box-shadow: 2px 3px #00000040;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.input_number_guess input{
+    padding-left: 0px;
+    padding-right: 30px;
+}
+.number_guess_search_btn {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.green_number_guess {
+    color: #039900;
+}
+.red_number_guess {
+    color: #990000;
+}
+#text_number_guess{
+    font-size: 12px;
+    /* opacity: 0; */
+    transition: opacity 0.3s ease;
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-top: 8px;
+}
+.number_guess_search_btn img{
+    width: 16px;
+    height: 16px;
+}
+@media (max-width: 768px){
+    .title_number_guess{
+        font-size: 14px;
+    }
+    .container_number_guess{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .input_wraper_number_guess{
+        width: 160px;
+        height: 32px;
+    }
+    input.input_number_guess{
+        font-size: 10px;
+        padding-right: 38px;
+        border-radius: 16px;
+    }
+    .number_guess_search_btn{
+        width: 33px;
+        height: 34px;
+    }
+    .number_guess_search_btn img{
+        width: 14px;
+        height: 14px;
+    }
+    #text_number_guess{
+        font-size: 11px;
+    }
+    .container_number_guess_inner{
+        margin-top: 33px;
+        gap: 62px;
+    }
+}
+@media (max-width: 480px){
+    .container_number_guess{
+        padding-bottom: 16px;
+        border-bottom: 1px solid black;
+    }
+    .title_number_guess{
+        font-size: 13px;
+    }
+    .input_wraper_number_guess{
+        min-width: 150px;
+        height: 30px;
+    }
+    #text_number_guess{
+        font-size: 10px;
+    }
+    .container_number_guess_inner{
+        margin-top: 30px;
+        gap: 33px;
+    }
+    .number_guess_search_btn{
+        width: 38px;
+        height: 31px;
+    }
+    .number_guess_search_btn img{
+        width: 13px;
+        height: 13px;
+    }
+}
