@@ -44,8 +44,8 @@
     width: 60px;
     height: 60px;
     background-color: black;
-    stroke: white;
-    fill: none;
+    stroke: none;
+    fill: white;
 }
 
 .images_rock_paper_scissors button{
