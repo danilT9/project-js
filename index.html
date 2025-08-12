@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/games-team-project/assets/index-807bf292.js"></script>
+    <script type="module" crossorigin src="/games-team-project/assets/index-81b2b630.js"></script>
     <link rel="stylesheet" href="/games-team-project/assets/index-367b74d9.css">
   </head>
   <body>
@@ -36,27 +36,6 @@
   </div>
 </section>
 
-<script>
-  const input_birthday = document.querySelector('.input_birthday')
-  const birthday_search_btn = document.querySelector('.birthday_search_btn')
-  const text_birthday = document.querySelector('#text_birthday')
-  birthday_search_btn.addEventListener('click', () => {
-    const input_birthday_value = parseInt(input_birthday.value)
-    if (isNaN(input_birthday_value)){
-      text_birthday.textContent = 'Неправильний рік'
-      text_birthday.classList.add('red')
-      return
-    }
-
-    if ((input_birthday_value % 4 === 0 && input_birthday_value % 100 !== 0) || input_birthday_value % 400 === 0){
-      text_birthday.textContent = 'Ви народилися у високосний рік!'
-      text_birthday.className = "green";
-    } else {
-      text_birthday.textContent = 'Ви народилися не у високосний рік!'
-      text_birthday.className = "red";
-    }
-  })
-</script>
 
     <section class="container_number_guess">
     <p class="title_number_guess">Вгадай число, яке загадав комп’ютер</p>
