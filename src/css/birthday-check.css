@@ -41,7 +41,7 @@
     max-width: 500px;
 }
 .input_birthday input{
-    padding-left: 0px;
+    padding-left: 15px;
     padding-right: 30px;
 }
 .green{
@@ -50,11 +50,13 @@
 .red{
     color: #990000;
 }
+
 #text_birthday{
     font-size: 12px;
-    /* opacity: 0; */
     transition: opacity 0.3s ease;
     font-family: "Montserrat Alternates", sans-serif;
+    display: inline-block;
+    min-width: 200px;
     margin-top: 8px;
 }
 .container_birthday_inner{
