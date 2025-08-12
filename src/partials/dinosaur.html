@@ -14,14 +14,26 @@
 <script>
   window.onload = function () {
     const cactus = document.querySelector('.obstacle-image');
+    const message = document.getElementById('message');
 
-    setTimeout(() => {
-      const computedStyle = getComputedStyle(cactus);
-      const currentLeft = computedStyle.left;
-
+    function startGame() {
+      message.style.display = 'none';
       cactus.style.animation = 'none';
-      cactus.style.left = currentLeft;
-      document.getElementById('message').style.display = 'block';
-    }, 4850);
+      cactus.offsetHeight;
+      cactus.style.animation = 'moveObstacle 8s linear';
+
+      setTimeout(() => {
+        const computedStyle = getComputedStyle(cactus);
+        const currentLeft = computedStyle.left;
+        cactus.style.animation = 'none';
+        cactus.style.left = currentLeft;
+
+        message.style.display = 'block';
+
+        setTimeout(startGame, 2000);
+      }, 3600);
+    }
+
+    startGame();
   };
 </script>
