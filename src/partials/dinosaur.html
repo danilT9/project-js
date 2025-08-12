@@ -1,39 +1,128 @@
 <section>
   <h1 class="h1">Google динозавр</h1>
   <div class="dino-container">
-    <img src="../img/dinosaur/google-dino.png" alt="" class="dino-image" />
+    <img src="../img/dinosaur/dino-google.png" alt="Dino" class="dino-image" />
+
+    <img
+      src="../img/dinosaur/google-ground.png"
+      alt="Ground"
+      class="ground-image"
+    />
+
     <img
       src="../img/dinosaur/google-cactus.png"
-      alt=""
-      class="obstacle-image"
+      alt="Cactus"
+      class="cactus-image1"
     />
+
+    <img
+      src="../img/dinosaur/google-cactus.png"
+      alt="Cactus"
+      class="cactus-image2"
+    />
+
+    <img
+      src="../img/dinosaur/google-cactus.png"
+      alt="Cactus"
+      class="cactus-image3"
+    />
+    <div class="message" id="message">Ви програли</div>
   </div>
-  <div class="message" id="message">Ви програли</div>
 </section>
 
 <script>
   window.onload = function () {
-    const cactus = document.querySelector('.obstacle-image');
+    const dino = document.querySelector('.dino-image');
     const message = document.getElementById('message');
+    const cactusList = [
+      document.querySelector('.cactus-image1'),
+      document.querySelector('.cactus-image2'),
+      document.querySelector('.cactus-image3'),
+    ];
 
-    function startGame() {
-      message.style.display = 'none';
-      cactus.style.animation = 'none';
-      cactus.offsetHeight;
-      cactus.style.animation = 'moveObstacle 8s linear';
+    let positionLeft = 150;
+    let positionBottom = 55;
 
-      setTimeout(() => {
-        const computedStyle = getComputedStyle(cactus);
-        const currentLeft = computedStyle.left;
-        cactus.style.animation = 'none';
-        cactus.style.left = currentLeft;
+    const minBottom = 55;
+    const maxBottom = 200;
 
-        message.style.display = 'block';
-
-        setTimeout(startGame, 2000);
-      }, 3600);
+    function moveLeft() {
+      if (positionLeft > 0) {
+        positionLeft -= 10;
+        dino.style.left = positionLeft + 'px';
+        checkCollision();
+      }
     }
 
-    startGame();
+    function moveRight() {
+      if (positionLeft < window.innerWidth - 60) {
+        positionLeft += 10;
+        dino.style.left = positionLeft + 'px';
+        checkCollision();
+      }
+    }
+
+    function moveUp() {
+      if (positionBottom < maxBottom) {
+        positionBottom += 10;
+        dino.style.bottom = positionBottom + 'px';
+        checkCollision();
+      }
+    }
+
+    function moveDown() {
+      if (positionBottom > minBottom) {
+        positionBottom -= 10;
+        dino.style.bottom = positionBottom + 'px';
+        checkCollision();
+      }
+    }
+
+    function checkCollision() {
+      const dinoRect = dino.getBoundingClientRect();
+
+      for (const cactus of cactusList) {
+        const cactusRect = cactus.getBoundingClientRect();
+
+        const isColliding = !(
+          dinoRect.right < cactusRect.left ||
+          dinoRect.left > cactusRect.right ||
+          dinoRect.bottom < cactusRect.top ||
+          dinoRect.top > cactusRect.bottom
+        );
+
+        if (isColliding) {
+          message.style.display = 'block';
+          return;
+        }
+      }
+
+      // якщо не зіткнувся — ховаємо повідомлення
+      message.style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function (e) {
+      const key = e.key.toLowerCase();
+
+      switch (key) {
+        case 'w':
+          moveUp();
+          break;
+        case 's':
+          moveDown();
+          break;
+        case 'a':
+          moveLeft();
+          break;
+        case 'd':
+          moveRight();
+          break;
+      }
+    });
+
+    // Початкові стилі
+    dino.style.left = positionLeft + 'px';
+    dino.style.bottom = positionBottom + 'px';
+    message.style.display = 'none';
   };
 </script>
