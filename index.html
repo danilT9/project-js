@@ -10,8 +10,8 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/Vite_vanilla-app-template/assets/index-54157699.js"></script>
-    <link rel="stylesheet" href="/Vite_vanilla-app-template/assets/index-80b08c18.css">
+    <script type="module" crossorigin src="/Vite_vanilla-app-template/assets/index-807bf292.js"></script>
+    <link rel="stylesheet" href="/Vite_vanilla-app-template/assets/index-367b74d9.css">
   </head>
   <body>
     <header>
@@ -24,17 +24,39 @@
       <input
         class="input_birthday"
         placeholder="Введіть рік народження"
-        type="text" style="padding-left: 0px; padding-right: 30px;"
+        type="text" style="padding-left: 10px; padding-right: 30px;"
       />
       <button class="birthday_search_btn">
         <svg class="icon"><use href="../img/symbol-defs.svg#magnifying-glass"></use></svg>
       </button>
     </div>
     <p class="green red" id="text_birthday">
-      Ви народилися у високосний рік
+
     </p>
   </div>
 </section>
+
+<script>
+  const input_birthday = document.querySelector('.input_birthday')
+  const birthday_search_btn = document.querySelector('.birthday_search_btn')
+  const text_birthday = document.querySelector('#text_birthday')
+  birthday_search_btn.addEventListener('click', () => {
+    const input_birthday_value = parseInt(input_birthday.value)
+    if (isNaN(input_birthday_value)){
+      text_birthday.textContent = 'Неправильний рік'
+      text_birthday.classList.add('red')
+      return
+    }
+
+    if ((input_birthday_value % 4 === 0 && input_birthday_value % 100 !== 0) || input_birthday_value % 400 === 0){
+      text_birthday.textContent = 'Ви народилися у високосний рік!'
+      text_birthday.className = "green";
+    } else {
+      text_birthday.textContent = 'Ви народилися не у високосний рік!'
+      text_birthday.className = "red";
+    }
+  })
+</script>
 
     <section class="container_number_guess">
     <p class="title_number_guess">Вгадай число, яке загадав комп’ютер</p>
