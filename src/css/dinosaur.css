@@ -23,20 +23,27 @@
   height: 20px;
   position: relative;
   left: 640px;
+  top: 40px;
 }
 
 .dino-image {
   position: relative;
   left: 350px;
   top: -20px;
+  top: 20px;
 }
 
 .obstacle-image {
   position: absolute;
-  bottom: 85px;
+  bottom: -444px;
   width: 25px;
   height: auto;
   animation: moveObstacle 8s linear infinite;
+}
+
+.message {
+  top: 1110px;
+  left: 60%;
 }
 
 @keyframes moveObstacle {
