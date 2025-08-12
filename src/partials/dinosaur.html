@@ -1,0 +1,27 @@
+<section>
+  <h1 class="h1">Google динозавр</h1>
+  <div class="dino-container">
+    <img src="../img/dinosaur/google-dino.png" alt="" class="dino-image" />
+    <img
+      src="../img/dinosaur/google-cactus.png"
+      alt=""
+      class="obstacle-image"
+    />
+  </div>
+  <div class="message" id="message">Ви програли</div>
+</section>
+
+<script>
+  window.onload = function () {
+    const cactus = document.querySelector('.obstacle-image');
+
+    setTimeout(() => {
+      const computedStyle = getComputedStyle(cactus);
+      const currentLeft = computedStyle.left;
+
+      cactus.style.animation = 'none';
+      cactus.style.left = currentLeft;
+      document.getElementById('message').style.display = 'block';
+    }, 4850);
+  };
+</script>
