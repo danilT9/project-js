@@ -95,3 +95,67 @@ input::placeholder {
 .result-input input {
   box-shadow: none;
 }
+
+/* Планшети: 481px – 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .inputs-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons-group {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .circle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Мобільні: до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+
+  .inputs-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons-group {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 0;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .circle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  input[type='text'] {
+    font-size: 13px;
+    padding: 0 8px;
+  }
+
+  input::placeholder {
+    font-size: 11px;
+  }
+}
