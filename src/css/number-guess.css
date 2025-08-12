@@ -44,7 +44,7 @@
     font-family: "Montserrat Alternates", sans-serif;
 }
 .input_number_guess input{
-    padding-left: 0px;
+    padding-left: 10px;
     padding-right: 30px;
 }
 .number_guess_search_btn {
@@ -74,10 +74,11 @@
 }
 #text_number_guess{
     font-size: 12px;
-    /* opacity: 0; */
     transition: opacity 0.3s ease;
     font-family: "Montserrat Alternates", sans-serif;
     margin-top: 8px;
+    display: inline-block;
+    min-width: 200px;
 }
 .number_guess_search_btn img{
     width: 16px;
