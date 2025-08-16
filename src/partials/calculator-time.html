@@ -1,28 +1,23 @@
 <section class="timecalc-section">
-  <section>
-    <div class="timecalc-centered">
-      <h1>Калькулятор часу</h1>
-      <div class="timecalc-input-result-row">
-        <div class="timecalc-search-wrapper">
-          <input
-            type="text"
-            id="timecalc-minutesInput"
-            placeholder="Введіть число"
-          />
-          <div
-            class="timecalc-search-button"
-            onclick="convertTimecalcMinutes()"
-          >
-            <svg class="icon">
-              <use href="/img/symbol-defs.svg#magnifying-glass"></use>
-            </svg>
-          </div>
+  <div class="timecalc-centered">
+    <h1>Калькулятор часу</h1>
+    <div class="timecalc-input-result-row">
+      <div class="timecalc-search-wrapper">
+        <input
+          type="text"
+          id="timecalc-minutesInput"
+          placeholder="Введіть число"
+        />
+        <div class="timecalc-search-button" onclick="convertTimecalcMinutes()">
+          <svg class="icon">
+            <use href="/img/symbol-defs.svg#magnifying-glass"></use>
+          </svg>
         </div>
-        <div class="timecalc-dashed-line"></div>
-        <div id="timecalc-result">3 дн. 15:45:01</div>
       </div>
+      <div class="timecalc-dashed-line"></div>
+      <div id="timecalc-result">3 дн. 15:45:01</div>
     </div>
-  </section>
+  </div>
 </section>
 <script>
   function convertTimecalcMinutes() {
