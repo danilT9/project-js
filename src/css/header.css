@@ -1,7 +1,9 @@
+/* Загальний код */
+
 header ul {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     font-size: 12px;
@@ -15,12 +17,47 @@ header button {
     font-family: 'Montserrat Alternates';
 }
 
-@media (min-width: 1366px) {
+.our-team {border-bottom: none !important; border-top: none !important};
+.filter-menu {display: none;}
+
+
+/* Dark Mode Styles */
+
+header {
+    background-color: white;
+    color: #373737;
+    transition: background 0.3s;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} header.dark {
+    background-color: #373737;
+    color: white;
+} header.dark button {
+    background-color: #373737;
+    color: white;
+} header.dark .header-main-btn {
+    background: url("/img/header-logo-light.svg") no-repeat center/contain;
+} header.dark .theme-btn {
+    background: #575757;
+} header.dark .interact-filter::after {
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+} header.dark .filter-menu {
+    background: url(/img/header/menu-light.svg) no-repeat center/contain;
+}
+
+
+
+/* Основний код */
+
+@media (min-width: 1280px) {
     .header-main-btn {
         margin-right: 31px;
-    }
-    .header-main-btn img {
+        background: url("/img/header-logo-dark.svg") no-repeat center/contain;
         width: 103px;
+        height: 41px;
     }
 
     .interact-filter::after {
@@ -29,41 +66,216 @@ header button {
         margin-left: 6px;
         width: 6px;
         height: 6px;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        border-left: 1px solid #373737;
+        border-bottom: 1px solid #373737;
         transform: rotate(-45deg) translateY(-3px);
     }
 
-    .contacts {
-        margin-right: 361px;
+    .contacts {margin-right: 361px;}
+
+    .theme-btn {
+        appearance: none;
+        width: 40px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 36px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: background 0.3s;
+    } .theme-btn::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white url("../img/header/sun.svg") no-repeat center/contain;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+    } .theme-btn:checked::before {
+        transform: translateX(20px);
+        background: black url("../img/header/moon.svg") no-repeat center/contain;
+    }
+
+    .welcome-modal {
+        display: flex;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(37, 37, 37, 0.3);
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+    } .welcome-modal-window {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40%;
+        background-color: white;
+        gap: 20px;
+        color: black;
+        border-radius: 5%;
+    } .welcome-modal-window p {
+        text-align: center;
+        margin-bottom: 5%;
+    } #name-input {
+        display: flex;
+        margin-top: -5%;
+        width: 80%;
+        height: 10%;
+        border-radius: 10%;
+    } #welcome-modal-submit {
+        background-color: black;
+        color: white;
+        width: 25%;
+        height: 11%;
+        border-radius: 5%;
     }
 }
-.theme-btn {
-    appearance: none;
-    width: 40px;
-    height: 20px;
-    background: #ccc;
-    border-radius: 36px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    transition: background 0.3s;
+
+
+@media (min-width: 800px) {
+    .header-main-btn {
+        margin-right: 31px;
+        background: url("/img/header-logo-dark.svg") no-repeat center/contain;
+        width: 103px;
+        height: 41px;
+    }
+
+    .interact-filter::after {
+        content: "";
+        display: inline-block;
+        margin-left: 6px;
+        width: 6px;
+        height: 6px;
+        border-left: 1px solid #373737;
+        border-bottom: 1px solid #373737;
+        transform: rotate(-45deg) translateY(-3px);
+    }
+
+    .theme-btn {
+        appearance: none;
+        width: 40px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 36px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: background 0.3s;
+    } .theme-btn::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white url("../img/header/sun.svg") no-repeat center/contain;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+    } .theme-btn:checked::before {
+        transform: translateX(20px);
+        background: black url("../img/header/moon.svg") no-repeat center/contain;
+    }
 }
 
 
-.theme-btn::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: white url("../img/header/sun.svg") no-repeat center/contain;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
+@media (min-width: 480px) and (max-width: 799px) {
+    .header-main-btn {
+        background: url("/img/header-logo-dark.svg") no-repeat center/contain;
+        width: 93px;
+        height: 41px;
+        margin-left: 40px;
+    }
+    .interact-filter, .our-team, .contacts, .user-hello {
+        display: none;
+    }
+
+    .filter-menu {
+        margin-left: -70px;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background: url(/img/header/menu-dark.svg) no-repeat center/contain;
+    }
+
+    
+
+    .theme-btn {
+        appearance: none;
+        width: 40px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 36px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: background 0.3s;
+    } .theme-btn::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white url("../img/header/sun.svg") no-repeat center/contain;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+    } .theme-btn:checked::before {
+        transform: translateX(20px);
+        background: black url("../img/header/moon.svg") no-repeat center/contain;
+    }
 }
 
-.theme-btn:checked::before {
-    transform: translateX(20px);
-    background: black url("../img/header/moon.svg") no-repeat center/contain;
+@media (min-width: 360px) and (max-width: 799px) {
+    .header-main-btn {
+        background: url("/img/header-logo-dark.svg") no-repeat center/contain;
+        width: 83px;
+        height: 41px;
+        margin-left: 40px;
+    }
+    .interact-filter, .our-team, .contacts, .user-hello {
+        display: none;
+    }
+
+    .filter-menu {
+        margin-left: -70px;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background: url(/img/header/menu-dark.svg) no-repeat center/contain;
+    }
+
+    
+
+    .theme-btn {
+        appearance: none;
+        width: 40px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 36px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: background 0.3s;
+    } .theme-btn::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white url("../img/header/sun.svg") no-repeat center/contain;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+    } .theme-btn:checked::before {
+        transform: translateX(20px);
+        background: black url("../img/header/moon.svg") no-repeat center/contain;
+    }
 }
