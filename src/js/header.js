@@ -96,7 +96,7 @@ gameExploratory.addEventListener("click", () => {
     gameExploratory.style.width = "100%";
     gameExploratory.style.height = "100%";
     gamesFilter.classList.toggle("hidden");
-intSections.forEach((sec) => {
+    intSections.forEach((sec) => {
         sec.style.display = "none"
     });
     gameSections.forEach((sec) => {
