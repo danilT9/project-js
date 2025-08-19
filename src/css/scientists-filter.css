@@ -1,0 +1,56 @@
+#scientists-action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#scientists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 500px;
+    gap: 20px;
+} #scientists button {
+    background: #dddddd;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #373737;
+    color: #373737;
+    font-size: 12px;
+}
+
+#scientists-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 950px;
+    gap: 20px;
+} #scientists-buttons button {
+    background: #373737;
+    color: white;
+    width: calc(45% - 20px);
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 3px 3px 3px #373737;
+} #scientists-buttons button:hover {
+    background: #474747;
+} #scientists-buttons button:active {
+    background: #575757;
+}
+
+@media (min-width: 1280px) {
+    
+}
