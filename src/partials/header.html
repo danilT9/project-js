@@ -2,12 +2,19 @@
     <nav>
         <ul>
             <li><button id="header-main-btn" class="header-main-btn"></button></li>
-            <li><button class="interact-filter">Інтерактив</button></li>
+            <li id="interacts">
+                <button class="interact-filter" id="interact-filter">Інтерактив</button>
+                <div id="games-filter">
+                    <button id="game-int">Числовий</button>
+                    <button id="game-game">Ігровий</button>
+                    <button id="game-exploratory">Ознайомчий</button>
+                </div>
+            </li>
             <li><button class="our-team">Наша команда</button></li>
             <li><button class="contacts">Контакти</button></li>
             <li><input class="theme-btn" id="theme-btn" type="checkbox"></li>
             <li><p id="user-hello" class="user-hello">Вітаємо, User!</p></li>
-            <li><button class="filter-menu"></button></li>
+            <li><button class="filter-menu" id="filter-menu"></button></li>
         </ul>
     </nav>
     <form id="welcome-modal" class="welcome-modal">
@@ -21,4 +28,11 @@
             <button id="welcome-modal-submit" type="submit">Зберегти</button>
         </div>
     </form>
+    <div id="filter-menu-modal">
+        <div id="filter-menu-modal-window">
+            <button id="game-int">Числовий</button>
+            <button id="game-game">Ігровий</button>
+            <button id="game-exploratory">Ознайомчий</button>
+        </div>
+    </div>
 </header>
