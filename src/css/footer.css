@@ -19,7 +19,7 @@
 } footer #footer-main-btn {
     background: url(/img/logo-dark.svg) no-repeat center/contain;
 } footer.dark #footer-main-btn {
-    background: url(/img/logo-white.svg) no-repeat center/contain;
+    background: url(/img/logo-light.svg) no-repeat center/contain;
 } footer .footer-contacts {
     color: #373737;
 } footer.dark .footer-contacts {
