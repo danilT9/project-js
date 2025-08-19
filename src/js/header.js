@@ -1,4 +1,6 @@
 const header = document.querySelector("header");
+const body = document.body
+const footer = document.querySelector("footer");
 const themeButton = document.getElementById("theme-btn");
 const welcomeModal = document.getElementById("welcome-modal");
 const nameInput = document.getElementById("name-input");
@@ -21,4 +23,5 @@ welcomeModal.addEventListener("submit", (e) => {
 themeButton.checked = false
 themeButton.addEventListener("change", () => {
     header.classList.toggle("dark", themeButton.checked);
+    footer.classList.toggle("dark", themeButton.checked);
 })

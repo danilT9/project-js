@@ -31,6 +31,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
 } header.dark {
     background-color: #373737;
     color: white;
@@ -38,7 +41,7 @@ header {
     background-color: #373737;
     color: white;
 } header.dark .header-main-btn {
-    background: url("/img/header-logo-light.svg") no-repeat center/contain;
+    background: url("/img/logo-light.svg") no-repeat center/contain;
 } header.dark .theme-btn {
     background: #575757;
 } header.dark .interact-filter::after {
@@ -55,7 +58,7 @@ header {
 @media (min-width: 1280px) {
     .header-main-btn {
         margin-right: 31px;
-        background: url("/img/header-logo-dark.svg") no-repeat center/contain;
+        background: url("/img/logo-dark.svg") no-repeat center/contain;
         width: 103px;
         height: 41px;
     }
