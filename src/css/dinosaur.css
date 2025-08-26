@@ -1,4 +1,15 @@
+.container_dino_game{
+  max-width: 700px;
+  width: 100%;
+  margin: 36px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .h1 {
+  display: flex;
+  justify-content: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -9,27 +20,27 @@
   width: 163px;
   height: 20px;
   position: relative;
-  left: 640px;
-  top: 40px;
 }
 
 .dino-container {
   position: relative;
   width: 100%;
   height: 250px;
-  overflow: hidden;
 }
 
 .ground-image {
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: -60px;
   right: 25%;
-  width: 50%;
+  width: 100%;
   height: auto;
   z-index: 1;
 }
 
 .dino-image {
+  display: flex;
   position: absolute;
   bottom: 55px;
   right: 15%;
@@ -79,3 +90,4 @@
   font-family: 'Montserrat Alternates', sans-serif;
   z-index: 999;
 }
+
