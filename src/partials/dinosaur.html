@@ -1,35 +1,37 @@
-<section class="container_dino_game">
-  <h1 class="h1">Google динозавр</h1>
+<section>
   <div class="dino-container">
-    <img src="/img/dinosaur/dino-google.png" alt="Dino" class="dino-image" />
+    <h1 class="h1">Google динозавр</h1>
 
-    <img
-      src="/img/dinosaur/google-ground.png"
-      alt="Ground"
-      class="ground-image"
-    />
+    <div class="game-field">
+      <img src="/img/dinosaur/dino-google.png" alt="Dino" class="dino-image" />
 
-    <img
-      src="/img/dinosaur/google-cactus.png"
-      alt="Cactus"
-      class="cactus-image1"
-    />
+      <img
+        src="/img/dinosaur/google-ground.png"
+        alt="Ground"
+        class="ground-image"
+      />
 
-    <img
-      src="/img/dinosaur/google-cactus.png"
-      alt="Cactus"
-      class="cactus-image2"
-    />
+      <img
+        src="/img/dinosaur/google-cactus.png"
+        alt="Cactus"
+        class="cactus-image1"
+      />
 
-    <img
-      src="/img/dinosaur/google-cactus.png"
-      alt="Cactus"
-      class="cactus-image3"
-    />
-    <div class="message" id="message">Ви програли</div>
+      <img
+        src="/img/dinosaur/google-cactus.png"
+        alt="Cactus"
+        class="cactus-image2"
+      />
+
+      <img
+        src="/img/dinosaur/google-cactus.png"
+        alt="Cactus"
+        class="cactus-image3"
+      />
+      <div class="message" id="message">Ви програли</div>
+    </div>
   </div>
 </section>
-<!-- 
 <script>
   window.onload = function () {
     const dino = document.querySelector('.dino-image');
@@ -85,8 +87,8 @@
         const cactusRect = cactus.getBoundingClientRect();
 
         const isColliding = !(
-          dinoRect.right < cactusRect.left ||
-          dinoRect.left > cactusRect.right ||
+          dinoRect.right < cactusRect.left 
+          dinoRect.left > cactusRect.right 
           dinoRect.bottom < cactusRect.top ||
           dinoRect.top > cactusRect.bottom
         );
@@ -125,4 +127,4 @@
     dino.style.bottom = positionBottom + 'px';
     message.style.display = 'none';
   };
-</script> -->
+</script>
