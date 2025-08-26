@@ -25,3 +25,4 @@ input_birthday.addEventListener('keydown', (e) => {
     }
 })
 birthday_search_btn.addEventListener('click', birthdayCheck)
+

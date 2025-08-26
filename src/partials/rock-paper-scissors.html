@@ -10,14 +10,21 @@
                   <li><button><svg class="paper"><use href="/img/symbol-defs.svg#paper"></use></svg></button></li>
                 </ul>
               </div>
-              <p class="green_rock_paper_scissors red_rock_paper_scissors" id="text_rock_paper_scissors">Ви виграли раунд!</p>
+              <div class="container_answers">
+                <svg class="my_answer"><use href=""></use></svg>
+                <p class="compare">&</p>
+                <svg class="comp_answer"><use href=""></use></svg>
+              </div>
+              <p class="green_rock_paper_scissors red_rock_paper_scissors" id="text_rock_paper_scissors"></p>
               <button class="btn_rock_paper_scissors">Варіант комп’ютера</button>
             </div>
         </div>
     <div class="container_results_rock_paper_scissors">
         <p class="score_rock_paper_scissors">Рахунок:</p>
-        <p class="computer_score_rock_paper_scissors">Комп’ютер - <span>0</span></p>
-        <p class="my_score_rock_paper_scissors">Ви - <span>0</span></p>
+        <p class="computer_score_rock_paper_scissors">Комп’ютер - <span class="my_score">0</span></p>
+        <p class="my_score_rock_paper_scissors">Ви - <span class="comp_score">0</span></p>
+        <button class="btn_continue">Наступний раунд</button>
     </div>
   </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
