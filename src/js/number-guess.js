@@ -7,6 +7,9 @@ let rundom_num = Math.floor(Math.random() * 10) + 1
 let attempts = 3
 count_attempts.textContent = attempts
 function checkNum() {
+    const rect = text_number_guess.getBoundingClientRect();
+    const x = (rect.left + rect.width / 2) / window.innerWidth;  
+    const y = (rect.top + rect.height / 2) / window.innerHeight; 
     const input_number_guess_value = parseInt(input_number_guess.value)
 
     if (isNaN(input_number_guess_value) || input_number_guess_value > 10 || input_number_guess_value <= 0){
@@ -18,6 +21,14 @@ function checkNum() {
       if (input_number_guess_value === rundom_num){
         text_number_guess.textContent = `Вітаю, ви вгадали число! (${rundom_num}) `
         text_number_guess.className = 'green_number_guess'
+      
+        confetti({
+            particleCount: 40, 
+            spread: 40, 
+            startVelocity: 20, 
+            scalar: 0.7,
+            origin: { x, y }
+          });
         attempts = 3
         rundom_num = Math.floor(Math.random() * 10) + 1
         count_attempts.textContent = attempts
@@ -35,6 +46,14 @@ function checkNum() {
             text_number_guess.className = 'red_number_guess'
             rundom_num = Math.floor(Math.random() * 10) + 1
             attempts = 3
+            confetti({
+                particleCount: 40, 
+                spread: 40, 
+                startVelocity: 20, 
+                scalar: 0.7,
+                origin: { x, y },
+                colors: ['#ff0000', '#660000', '#000000', '#111111', '#222222', '#333333']
+              });
         }
         count_attempts.textContent = attempts
         input_number_guess.value = ''

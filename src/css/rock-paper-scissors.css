@@ -31,6 +31,7 @@
 .images_rock_paper_scissors ul{
     display: flex;
     gap: 38px;
+    justify-content: center;
 }
 .images_rock_paper_scissors ul li{
     display: flex;
@@ -46,8 +47,18 @@
     background-color: black;
     stroke: none;
     fill: white;
-}
 
+}
+ul li button svg:hover use {
+    filter: drop-shadow(0 0 5px #ffd700) 
+            drop-shadow(0 0 10px #ffd700);
+    transition: filter 0.3s ease;
+  }
+
+ul li button:hover svg  {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 .images_rock_paper_scissors button{
     border: none;
     border-radius: 20px;
@@ -75,6 +86,11 @@
     align-self:center;
     align-items: center;
     cursor: pointer;
+    
+}
+.btn_rock_paper_scissors:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 .container_results_rock_paper_scissors {
     display: flex;
@@ -85,11 +101,90 @@
     right: 0;  
     top: 100px;
 }
+.comp_answer{
+    display: none;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    align-self:center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    stroke: none;
+    fill: white;
+    margin-top: 36px;
+}
+.my_answer{
+    display: none;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    align-self:center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    stroke: none;
+    fill: white;
+    margin-top: 36px;
+}
+.container_answers{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+.compare{
+    margin-top: 60px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+.btn_continue{
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    
+}
+.btn_continue:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 .left_block_rock_paper_scissors{
     display: flex;
     flex-direction: column;
     
 }
+.like {
+    position: absolute;
+    font-size: 20px;
+    animation: floatLike 1s ease-out forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes floatLike {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-50px) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) scale(0.8);
+    }
+  }
+  
 @media (max-width: 768px){
     .title_rock_paper_scissors{
         font-size: 14px;
@@ -114,6 +209,13 @@
         margin-top: 26px;
     }
     .container_results_rock_paper_scissors {
+        font-size: 11px;
+        right: -34px;
+    }
+    .btn_continue{
+        font-size: 11px;
+    }
+    .btn_continue{
         font-size: 11px;
     }
     
@@ -143,7 +245,19 @@
     }
     .container_results_rock_paper_scissors {
         font-size: 10px;
-        right: 12px;
+        right: -44px;
         top: 80px;
+    }
+    .btn_continue{
+        font-size: 10px;
+    }
+    .container_answers{
+        gap: 20px;
+    }
+    .compare{
+        font-size: 18px;
+    }
+    .btn_continue{
+        font-size: 10px;
     }
 }
