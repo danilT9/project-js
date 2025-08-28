@@ -1,0 +1,88 @@
+#scientists-action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    color: white;
+} #scientists-action.dark {
+    background: #373737;
+    color: white;
+}
+
+#scientists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 500px;
+    gap: 20px;
+} #scientists button {
+    background: #474747;
+    border: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #ffffff;
+    color: #373737;
+    font-size: 12px;
+} #scientists-action.dark #scientists button {
+    background: #474747;
+    border: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+#scientists-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 950px;
+    gap: 20px;
+} #scientists-buttons button {
+    background: #373737;
+    color: white;
+    width: calc(45% - 20px);
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 3px 3px 3px #373737;
+} #scientists-action.dark #scientists-buttons button {
+    background: rgb(247, 247, 247);
+    color: #373737;
+    width: calc(45% - 20px);
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 3px 3px 3px #7a7a7a;
+} #scientists-buttons button:hover {
+    background: #fdfdfd;
+} #scientists-buttons button:active {
+    background: #fbfbfb;
+} #scientists-action.dark #scientists-buttons button:hover {
+    background: rgb(227, 227, 227);
+} #scientists-action.dark #scientists-buttons button:active {
+    background: rgb(207, 207, 207);
+}
+
+@media (min-width: 360px) and (max-width: 800px) {
+    #scientists-buttons button {
+        border-radius: 10px;
+        font-size: 10px;
+    } #scientists-action.dark #scientists-buttons button {
+        border-radius: 10px;
+        font-size: 10px;
+    }
+}
