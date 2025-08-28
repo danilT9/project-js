@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 .container_title {
   max-width: 700px;
   width: 100%;
@@ -11,6 +12,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .main_title {
   font-size: 24px;
   white-space: nowrap;
@@ -114,6 +116,10 @@
 
 
 @media (max-width: 768px) {
+  .main_title {
+    font-size: 20px;
+  }
+
   .title_birthday {
     font-size: 14px;
   }
@@ -157,7 +163,12 @@
   }
 }
 
+
 @media (max-width: 480px) {
+  .main_title {
+    font-size: 18px;
+  }
+
   .container_birthday {
     padding-top: 16px;
     padding-bottom: 16px;
