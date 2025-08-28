@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/games-team-project/assets/index-5a978e8b.js"></script>
-    <link rel="stylesheet" href="/games-team-project/assets/index-bb5a857f.css">
+    <script type="module" crossorigin src="/games-team-project/assets/index-2abf751a.js"></script>
+    <link rel="stylesheet" href="/games-team-project/assets/index-ac82ee53.css">
   </head>
   <body>
     <header>
@@ -35,7 +35,7 @@
       />
       <button class="birthday_search_btn">
         <svg class="icon">
-          <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+          <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
         </svg>
       </button>
     </div>
@@ -56,7 +56,7 @@
         />
         <button class="number_guess_search_btn">
           <svg class="icon">
-            <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+            <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
           </svg>
         </button>
       </div>
@@ -73,29 +73,54 @@
     <section>
   <div class="container_rock_paper_scissors">
     <div class="container_rock_paper_scissors_inner">
-        <div class="left_block_rock_paper_scissors">
-            <h2 class="title_rock_paper_scissors">Камінь - ножиці - папір</h2>
-            <div class="images_rock_paper_scissors">
-                <ul>
-                  <li><button><svg class="stone"><use href="/games-team-project/assets/symbol-defs-226f0714.svg#stone"></use></svg></button></li>
-                  <li><button><svg class="scissors"><use href="/games-team-project/assets/symbol-defs-226f0714.svg#scissors"></use></svg></button></li>
-                  <li><button><svg class="paper"><use href="/games-team-project/assets/symbol-defs-226f0714.svg#paper"></use></svg></button></li>
-                </ul>
-              </div>
-              <div class="container_answers">
-                <svg class="my_answer"><use href=""></use></svg>
-                <p class="compare">&</p>
-                <svg class="comp_answer"><use href=""></use></svg>
-              </div>
-              <p class="green_rock_paper_scissors red_rock_paper_scissors" id="text_rock_paper_scissors"></p>
-              <button class="btn_rock_paper_scissors">Варіант комп’ютера</button>
-            </div>
+      <div class="left_block_rock_paper_scissors">
+        <h2 class="title_rock_paper_scissors">Камінь - ножиці - папір</h2>
+        <div class="images_rock_paper_scissors">
+          <ul>
+            <li>
+              <button>
+                <svg class="stone">
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#stone"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button>
+                <svg class="scissors">
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#scissors"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button>
+                <svg class="paper">
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#paper"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
+        <div class="container_answers">
+          <svg class="my_answer"><use href=""></use></svg>
+          <p class="compare">&</p>
+          <svg class="comp_answer"><use href=""></use></svg>
+        </div>
+        <p
+          class="green_rock_paper_scissors red_rock_paper_scissors"
+          id="text_rock_paper_scissors"
+        ></p>
+        <button class="btn_rock_paper_scissors">Варіант комп’ютера</button>
+      </div>
+    </div>
     <div class="container_results_rock_paper_scissors">
-        <p class="score_rock_paper_scissors">Рахунок:</p>
-        <p class="computer_score_rock_paper_scissors">Комп’ютер - <span class="my_score">0</span></p>
-        <p class="my_score_rock_paper_scissors">Ви - <span class="comp_score">0</span></p>
-        <button class="btn_continue">Наступний раунд</button>
+      <p class="score_rock_paper_scissors">Рахунок:</p>
+      <p class="computer_score_rock_paper_scissors">
+        Комп’ютер - <span class="my_score">0</span>
+      </p>
+      <p class="my_score_rock_paper_scissors">
+        Ви - <span class="comp_score">0</span>
+      </p>
+      <button class="btn_continue">Наступний раунд</button>
     </div>
   </div>
 </section>
@@ -196,7 +221,7 @@
         />
         <div class="timecalc-search-button" onclick="convertTimecalcMinutes()">
           <svg class="icon">
-            <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+            <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
           </svg>
         </div>
       </div>
@@ -269,6 +294,103 @@
     </div>
   </div>
 </section>
+
+<script>
+  window.onload = function () {
+    const dino = document.querySelector('.dino-image');
+    const message = document.getElementById('message');
+    const cactusList = [
+      document.querySelector('.cactus-image1'),
+      document.querySelector('.cactus-image2'),
+      document.querySelector('.cactus-image3'),
+    ];
+
+    let positionLeft = 150;
+    let positionBottom = 55;
+
+    const minBottom = 55;
+    const maxBottom = 200;
+
+    function moveLeft() {
+      if (positionLeft > 0) {
+        positionLeft -= 10;
+        dino.style.left = positionLeft + 'px';
+        checkCollision();
+      }
+    }
+
+    function moveRight() {
+      if (positionLeft < window.innerWidth - 60) {
+        positionLeft += 10;
+        dino.style.left = positionLeft + 'px';
+        checkCollision();
+      }
+    }
+
+    function moveUp() {
+      if (positionBottom < maxBottom) {
+        positionBottom += 10;
+        dino.style.bottom = positionBottom + 'px';
+        checkCollision();
+      }
+    }
+
+    function moveDown() {
+      if (positionBottom > minBottom) {
+        positionBottom -= 10;
+        dino.style.bottom = positionBottom + 'px';
+        checkCollision();
+      }
+    }
+
+    function checkCollision() {
+      const dinoRect = dino.getBoundingClientRect();
+
+      for (const cactus of cactusList) {
+        const cactusRect = cactus.getBoundingClientRect();
+
+        const isColliding = !(
+          dinoRect.right < cactusRect.left ||
+          dinoRect.left > cactusRect.right ||
+          dinoRect.bottom < cactusRect.top ||
+          dinoRect.top > cactusRect.bottom
+        );
+
+        if (isColliding) {
+          message.style.display = 'block';
+          return;
+        }
+      }
+
+      // якщо не зіткнувся — ховаємо повідомлення
+      message.style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function (e) {
+      const key = e.key.toLowerCase();
+
+      switch (key) {
+        case 'w':
+          moveUp();
+          break;
+        case 's':
+          moveDown();
+          break;
+        case 'a':
+          moveLeft();
+          break;
+        case 'd':
+          moveRight();
+          break;
+      }
+    });
+
+    // Початкові стилі
+    dino.style.left = positionLeft + 'px';
+    dino.style.bottom = positionBottom + 'px';
+    message.style.display = 'none';
+  };
+</script>
     <section class="football">
   <h2 class="title">Футбол</h2>
   <div class="field">
