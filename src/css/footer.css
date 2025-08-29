@@ -1,11 +1,5 @@
 /* Const code */
-#nav {
-    display: flex;
-    flex-direction: row;
-    gap: 185px;
-    justify-content: center;
-    align-items: center;
-} footer {
+footer {
     transition: background 0.3s;
     display: flex;
     justify-content: center;
@@ -54,6 +48,14 @@
 
 
 @media (min-width: 1280px) {
+    #nav {
+        display: flex;
+        flex-direction: row;
+        gap: 185px;
+        justify-content: center;
+        align-items: center;
+    }
+
     #footer-main-btn {
         width: 165px;
         height: 63px;
@@ -90,6 +92,255 @@
         height: 35px;
         border-radius: 7px;
         color: white;
+    } .subscribe-submit:hover {
+        background: #474747;
+    } .subscribe-submit:active {
+        background-color: #575757;
+    }
+
+    #subscribe-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(37, 37, 37, 0.4);
+        justify-content: center;
+        align-items: center;
+    } #subscribe-modal-window {
+        display: flex;
+        width: 30%;
+        height: 30%;
+        z-index: 3;
+        font-size: 20px;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .describe {
+        margin-top: 10px;
+        font-size: 6px;
+    }
+}
+
+
+
+@media (min-width: 800px) and (max-width: 1279px) {
+    #nav {
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer-main-btn {
+        width: 125px;
+        height: 63px;
+        border: none;
+    }
+
+    .footer-contacts {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #subscribe-form {
+        font-size: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    } #subscribe-form input {
+        width: 127px;
+        height: 35px;
+        border-radius: 7px;
+        border: 1px solid #373737;
+        text-align: center;
+    } #subscribe-form input::placeholder {
+        font-size: 12px;
+    } #subscribe-form input:focus {
+        outline: none;
+        color: crimson;
+    }
+
+    .subscribe-submit {
+        width: 93px;
+        height: 35px;
+        border-radius: 7px;
+        color: white;
+    } .subscribe-submit:hover {
+        background: #474747;
+    } .subscribe-submit:active {
+        background-color: #575757;
+    }
+
+    #subscribe-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(37, 37, 37, 0.4);
+        justify-content: center;
+        align-items: center;
+    } #subscribe-modal-window {
+        display: flex;
+        width: 30%;
+        height: 30%;
+        z-index: 3;
+        font-size: 20px;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .describe {
+        margin-top: 10px;
+        font-size: 6px;
+    }
+}
+
+
+
+@media (min-width: 480px) and (max-width: 799px) {
+    footer {
+        height: 15%;
+    }
+    #nav {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer-main-btn {
+        width: 75px;
+        height: 63px;
+        border: none;
+    }
+
+    .footer-contacts {
+        font-size: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #subscribe-form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    } #subscribe-form input {
+        width: 80px;
+        height: 25px;
+        border-radius: 7px;
+        border: 1px solid #373737;
+        text-align: center;
+        font-size: 7px;
+    } #subscribe-form input::placeholder {
+        font-size: 12px;
+    } #subscribe-form input:focus {
+        outline: none;
+        color: crimson;
+    }
+
+    .subscribe-submit {
+        width: 80px;
+        height: 25px;
+        border-radius: 7px;
+        color: white;
+        font-size: 9px;
+    } .subscribe-submit:hover {
+        background: #474747;
+    } .subscribe-submit:active {
+        background-color: #575757;
+    }
+
+    #subscribe-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(37, 37, 37, 0.4);
+        justify-content: center;
+        align-items: center;
+    } #subscribe-modal-window {
+        display: flex;
+        width: 30%;
+        height: 30%;
+        z-index: 3;
+        font-size: 20px;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .describe {
+        margin-top: 10px;
+        font-size: 6px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 479px) {
+    #nav {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer-main-btn {
+        width: 75px;
+        height: 63px;
+        border: none;
+    }
+
+    .footer-contacts {
+        font-size: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #subscribe-form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    } #subscribe-form input {
+        width: 70px;
+        height: 22px;
+        border-radius: 7px;
+        border: 1px solid #373737;
+        text-align: center;
+        font-size: 7px;
+    } #subscribe-form input::placeholder {
+        font-size: 12px;
+    } #subscribe-form input:focus {
+        outline: none;
+        color: crimson;
+    }
+
+    .subscribe-submit {
+        width: 70px;
+        height: 22px;
+        border-radius: 7px;
+        color: white;
+        font-size: 9px;
     } .subscribe-submit:hover {
         background: #474747;
     } .subscribe-submit:active {
