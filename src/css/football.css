@@ -21,7 +21,8 @@
 
 .field {
   position: relative;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   height: 220px;
   margin: 0 auto;
   background-color: #5abb58;
@@ -61,7 +62,7 @@
   border-radius: 50%;
   top: 85px;
   left: 92px;
-  cursor: grab;
+  transition: top 300ms ease, left 300ms;
 }
 
 .gate {

@@ -1,149 +1,327 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-.container_rock_paper_scissors {
-    max-width:700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    border-bottom: 1.5px solid black;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-.title_rock_paper_scissors {
-    font-size: 16px;
-    margin-bottom: 36px;
-}
-.container_rock_paper_scissors_inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    
-}
-.images_rock_paper_scissors ul{
-    display: flex;
-    gap: 38px;
-}
-.images_rock_paper_scissors ul li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.images_rock_paper_scissors svg{
-    border-radius: 20px;
-    padding: 10px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    background-color: black;
-    stroke: none;
-    fill: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.images_rock_paper_scissors button{
-    border: none;
-    border-radius: 20px;
+.container_rock_paper_scissors {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1.5px solid black;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
-.green_rock_paper_scissors{
-    color: #039900;
+
+.title_rock_paper_scissors {
+  font-size: 16px;
+  margin-bottom: 36px;
 }
-.red_rock_paper_scissors{
-    color: #990000;
+
+.container_rock_paper_scissors_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
 }
+
+.images_rock_paper_scissors ul {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+}
+
+.images_rock_paper_scissors ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images_rock_paper_scissors svg {
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  stroke: none;
+  fill: white;
+}
+
+ul li button svg:hover use {
+  filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 10px #ffd700);
+  transition: filter 0.3s ease;
+}
+
+ul li button:hover svg {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.images_rock_paper_scissors button {
+  border: none;
+  border-radius: 20px;
+}
+
+.green_rock_paper_scissors {
+  color: #039900;
+}
+
+.red_rock_paper_scissors {
+  color: #990000;
+}
+
 #text_rock_paper_scissors {
-    font-size: 12px;
-    margin-top: 36px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  font-size: 12px;
+  margin-top: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
 .btn_rock_paper_scissors {
-    color: white;
-    background-color: black;
-    border-radius: 20px;
-    font-size: 12px;
-    padding: 10px 20px 10px 20px;
-    margin-top: 36px;
-    align-self:center;
-    align-items: center;
-    cursor: pointer;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 36px;
+  align-self: center;
+  align-items: center;
+  cursor: pointer;
 }
+
+.btn_rock_paper_scissors:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
 .container_results_rock_paper_scissors {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+
+.comp_answer {
+  display: none;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  align-self: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  stroke: none;
+  fill: white;
+  margin-top: 36px;
+}
+
+.my_answer {
+  display: none;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  align-self: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  stroke: none;
+  fill: white;
+  margin-top: 36px;
+}
+
+.container_answers {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.compare {
+  margin-top: 60px;
+  font-size: 25px;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn_continue {
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn_continue:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.left_block_rock_paper_scissors {
+  display: flex;
+  flex-direction: column;
+}
+
+.like {
+  position: absolute;
+  font-size: 20px;
+  animation: floatLike 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatLike {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-50px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.8);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .title_rock_paper_scissors {
+    font-size: 14px;
+  }
+
+  .container_rock_paper_scissors {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .images_rock_paper_scissors ul {
+    gap: 32px;
+  }
+
+  .images_rock_paper_scissors svg {
+    width: 55px;
+  }
+
+  #text_rock_paper_scissors {
+    font-size: 11px;
+    margin-top: 26px;
+  }
+
+  .btn_rock_paper_scissors {
+    font-size: 11px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 26px;
+  }
+
+  .container_results_rock_paper_scissors {
+    font-size: 11px;
+    right: -34px;
+  }
+
+  .btn_continue {
+    font-size: 11px;
+  }
+
+  .btn_continue {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title_rock_paper_scissors {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .container_rock_paper_scissors {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_rock_paper_scissors_inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .images_rock_paper_scissors ul {
+    gap: 30px;
+  }
+
+  .images_rock_paper_scissors svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  #text_rock_paper_scissors {
+    font-size: 11px;
+    margin-top: 18px;
+  }
+
+  .btn_rock_paper_scissors {
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-top: 18px;
+    align-self: center;
+  }
+
+  .container_answers {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .container_answers svg {
+    margin-top: 0;
+  }
+
+  .compare {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .my_answer,
+  .comp_answer {
+    margin-top: 0;
+  }
+
+  .container_results_rock_paper_scissors {
+    position: static;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
-    gap: 10px;
-    position: absolute;
-    right: 0;  
-    top: 100px;
-}
-.left_block_rock_paper_scissors{
-    display: flex;
-    flex-direction: column;
-    
-}
-@media (max-width: 768px){
-    .title_rock_paper_scissors{
-        font-size: 14px;
-    }
-    .container_rock_paper_scissors{
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-    .images_rock_paper_scissors ul{
-        gap: 32px;
-    }
-    .images_rock_paper_scissors svg{
-        width: 55px;
-    }
-    #text_rock_paper_scissors {
-        font-size: 11px;
-        margin-top: 26px;
-    }
-    .btn_rock_paper_scissors {
-        font-size: 11px;
-        padding: 10px 20px 10px 20px;
-        margin-top: 26px;
-    }
-    .container_results_rock_paper_scissors {
-        font-size: 11px;
-    }
-    
-}
-@media (max-width: 480px){
-    .title_rock_paper_scissors{
-        font-size: 13px;
-    }
-    .container_rock_paper_scissors{
-        padding-top: 18px;
-        padding-bottom: 18px;
-    }
-    .images_rock_paper_scissors ul{
-        gap: 27px;
-    }
-    .images_rock_paper_scissors svg{
-        width: 50px;
-    }
-    #text_rock_paper_scissors {
-        font-size: 10px;
-        margin-top: 18px;
-    }
-    .btn_rock_paper_scissors {
-        font-size: 10px;
-        padding: 10px 20px 10px 20px;
-        margin-top: 22px;
-    }
-    .container_results_rock_paper_scissors {
-        font-size: 10px;
-        right: 12px;
-        top: 80px;
-    }
+    align-items: center;
+    margin-top: 15px;
+    font-size: 11px;
+    gap: 7px;
+  }
+
+  .btn_continue {
+    font-size: 10px;
+    margin-top: 10px;
+    align-self: center;
+  }
 }
