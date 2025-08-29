@@ -9,6 +9,10 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+} #scientists-action h2 {
+    color: #373737;
+} #scientists-action.dark h2 {
+    color: white;
 } #scientists-action.dark {
     background: #373737;
     color: white;
