@@ -13,7 +13,7 @@ const filterMenuModalWindow = document.getElementById("filter-menu-modal-window"
 const gameInt = document.getElementById("game-int");
 const gameGame = document.getElementById("game-game");
 const gameExploratory = document.getElementById("game-exploratory");
-
+const scientistsAction = document.getElementById("scientists-action");
 
 
 welcomeModal.addEventListener("submit", (e) => {
@@ -37,6 +37,7 @@ themeButton.checked = false
 themeButton.addEventListener("change", () => {
     header.classList.toggle("dark", themeButton.checked);
     footer.classList.toggle("dark", themeButton.checked);
+    scientistsAction.classList.toggle("dark", themeButton.checked);
 });
 
 
