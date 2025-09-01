@@ -35,8 +35,8 @@
 }
 
 .member-photo {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 165px;
   border-radius: 20px;
   background-color: #d9d9d9;
 }
@@ -46,6 +46,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+.slide:nth-child(2) .member-photo img {
+  object-position: 20% center;
 }
 
 .member-name {
@@ -159,6 +163,7 @@
     right: -80px;
   }
 }
+
 
 @media (max-width: 480px) {
   .our-team {
