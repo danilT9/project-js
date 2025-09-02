@@ -53,9 +53,9 @@ filterMenuModal.addEventListener("click", () => {
 
 
 const sections = document.querySelectorAll("section");
-const intSectionsIndex = [0, 1, 3, 4, 8];
-const gameSectionsIndex = [2, 6, 7];
-const exploratorySectionsIndex = [9, 10];
+const intSectionsIndex = [1, 2, 4, 5, 8];
+const gameSectionsIndex = [3, 6, 7];
+const exploratorySectionsIndex = [0, 9, 10];
 const intSections = intSectionsIndex.map(i => sections[i]);
 const gameSections = gameSectionsIndex.map(i => sections[i]);
 const exploratorySections = exploratorySectionsIndex.map(i => sections[i]);
