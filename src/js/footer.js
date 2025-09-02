@@ -8,6 +8,7 @@ subscribeForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (subscribeInput.value.length > 3 && subscribeInput.value.length <= 64) {
         subscribeModal.style.display = "flex"
+        subscribeInput.value = ""
     } else {
         subscribeInput.value = ""
         subscribeInput.style.border = "1px solid crimson"
