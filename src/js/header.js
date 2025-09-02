@@ -46,6 +46,7 @@ themeButton.addEventListener("change", () => {
 
 filterMenu.addEventListener("click", () => {
     filterMenuModal.classList.toggle("show");
+    filterMenuModalWindow.classList.toggle("show");
 });
 filterMenuModal.addEventListener("click", () => {
     filterMenuModal.classList.remove("show");
