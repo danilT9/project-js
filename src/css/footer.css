@@ -46,7 +46,6 @@ footer {
 }
 
 
-
 @media (min-width: 1280px) {
     #nav {
         display: flex;
@@ -112,7 +111,7 @@ footer {
     } #subscribe-modal-window {
         display: flex;
         width: 30%;
-        height: 30%;
+        height: 25%;
         z-index: 3;
         font-size: 20px;
         background: white;
@@ -120,6 +119,33 @@ footer {
         align-items: center;
         text-align: center;
         border-radius: 20px;
+        position: relative;
+    }
+
+    .icon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon.top-left {
+        top: 65px;
+        left: 60px;
+    }
+
+    .icon.bottom-left {
+        bottom: 65px;
+        left: 60px;
+    }
+
+    .icon.top-right {
+        top: 65px;
+        right: 60px;
+    }
+
+    .icon.bottom-right {
+        bottom: 65px;
+        right: 60px;
     }
 
     .describe {
@@ -193,8 +219,8 @@ footer {
         align-items: center;
     } #subscribe-modal-window {
         display: flex;
-        width: 30%;
-        height: 30%;
+        width: 35%;
+        height: 15%;
         z-index: 3;
         font-size: 20px;
         background: white;
@@ -202,6 +228,32 @@ footer {
         align-items: center;
         text-align: center;
         border-radius: 20px;
+    }
+
+    .icon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon.top-left {
+        top: 65px;
+        left: 60px;
+    }
+
+    .icon.bottom-left {
+        bottom: 85px;
+        left: 60px;
+    }
+
+    .icon.top-right {
+        top: 85px;
+        right: 60px;
+    }
+
+    .icon.bottom-right {
+        bottom: 85px;
+        right: 60px;
     }
 
     .describe {

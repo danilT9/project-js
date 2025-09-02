@@ -10,10 +10,11 @@ subscribeForm.addEventListener("submit", (e) => {
         subscribeModal.style.display = "flex"
         subscribeInput.value = ""
     } else {
-        subscribeInput.value = ""
         subscribeInput.style.border = "1px solid crimson"
         subscribeInput.style.color = "crimson"
+        subscribeInput.value = ""
     }
+    subscribeInput.value = ""
 });
 
 subscribeModal.addEventListener("click", () => {
