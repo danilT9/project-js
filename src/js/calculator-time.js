@@ -24,6 +24,8 @@ function convertTimecalcMinutes() {
   result += `${paddedHours}:${paddedMinutes}`;
 
   document.getElementById('timecalc-result').textContent = result;
+
+  document.querySelector('#timecalc-minutesInput').value = '';
 }
 
 document
