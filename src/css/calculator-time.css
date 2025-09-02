@@ -107,7 +107,7 @@
   border-top: 1px dashed #000000;
 }
 
-/* Планшети: 481px – 768px */
+
 @media (max-width: 768px) and (min-width: 481px) {
   .timecalc-input-result-row {
     flex-direction: column;
@@ -135,7 +135,7 @@
   }
 }
 
-/* Мобільні: до 480px */
+
 @media (max-width: 480px) {
   .timecalc-input-result-row {
     flex-direction: column;

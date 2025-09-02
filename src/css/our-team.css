@@ -1,7 +1,15 @@
-.our-team {
-  border-top: 1.5px solid black;
-  border-bottom: 1.5px solid black;
+.team-section {
+  position: relative;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+.team-section::before,
+.team-section::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: black;
   margin: 0 auto;
 }
 
@@ -35,17 +43,37 @@
 }
 
 .member-photo {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 165px;
   border-radius: 20px;
   background-color: #d9d9d9;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.slide:nth-child(2) .member-photo img {
+  object-position: 20% center;
 }
 
 .member-name {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  margin: 20px;
+  margin-top: 20px;
+}
+
+.member-role {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 12px;
+  text-align: center;
+  font-style: italic;
 }
 
 .member-info {
@@ -53,6 +81,8 @@
   font-weight: 400;
   font-size: 12px;
   margin-bottom: 24px;
+  line-height: 1.3;
+  text-align: center;
 }
 
 .arrow {
@@ -119,12 +149,17 @@
 
   .member-name {
     font-size: 13px;
-    margin: 15px 0;
+    margin-top: 12px;
+  }
+
+  .member-role {
+    font-size: 11px;
+    margin: 10px;
   }
 
   .member-info {
     font-size: 11px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     text-align: center;
   }
 
@@ -136,6 +171,7 @@
     right: -80px;
   }
 }
+
 
 @media (max-width: 480px) {
   .our-team {
@@ -164,13 +200,18 @@
 
   .member-name {
     font-size: 12px;
-    margin: 10px 0;
+    margin-top: 10px;
     text-align: center;
+  }
+
+  .member-role {
+    font-size: 10px;
+    margin: 9px;
   }
 
   .member-info {
     font-size: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-align: center;
   }
 

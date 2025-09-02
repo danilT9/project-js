@@ -4,63 +4,51 @@
   line-height: 100%;
   letter-spacing: 0;
   color: #000000;
-  margin-bottom: 36px;
+  margin: 0;
+  padding: 36px 0;
+  width: 100%;
   text-align: center;
-  width: 163px;
-  height: 20px;
-  position: relative;
-  left: 640px;
-  top: 40px;
 }
 
 .dino-container {
   position: relative;
   width: 100%;
-  height: 250px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.game-field {
+  position: relative;
+  height: 230px;
   overflow: hidden;
 }
 
 .ground-image {
   position: absolute;
-  bottom: -60px;
-  right: 25%;
-  width: 50%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: auto;
   z-index: 1;
 }
 
 .dino-image {
   position: absolute;
-  bottom: 55px;
-  right: 15%;
-  width: 50px;
+  bottom: 50px;
+  left: 17%;
+  width: 55px;
   z-index: 2;
 }
 
-.cactus-image1 {
-  position: absolute;
-  bottom: 57px;
-  right: 70%;
-  width: 25px;
-  height: auto;
-  z-index: 2;
-}
-
-.cactus-image2 {
-  position: absolute;
-  bottom: 57px;
-  right: 50%;
-  width: 25px;
-  height: auto;
-  z-index: 2;
-}
-
+.cactus-image1,
+.cactus-image2,
 .cactus-image3 {
+  display: none;
   position: absolute;
-  bottom: 57px;
-  right: 30%;
-  width: 25px;
-  height: auto;
+  bottom: 50px;
+  width: 30px;
+  height: 42px;
   z-index: 2;
 }
 
@@ -70,12 +58,98 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 14px;
   color: #cc0000;
-  font-weight: bold;
+  font-weight: 500;
   padding: 10px 20px;
-  border: 2px solid #cc0000;
-  border-radius: 8px;
+  border: 1px solid #cc0000;
+  border-radius: 5px;
   font-family: 'Montserrat Alternates', sans-serif;
   z-index: 999;
+}
+
+.start-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 14px;
+    padding: 24px 0;
+  }
+
+  .game-field {
+    height: 200px;
+  }
+
+  .dino-image {
+    bottom: 30px;
+    width: 45px;
+    left: 16%;
+  }
+
+  .cactus-image1,
+  .cactus-image2,
+  .cactus-image3 {
+    bottom: 30px;
+    width: 25px;
+    height: 38px;
+  }
+
+  .message {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .start-btn {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 12px;
+    padding: 16px 0;
+  }
+
+  .game-field {
+    height: 160px;
+  }
+
+  .dino-image {
+    bottom: 26px;
+    width: 37px;
+    left: 15%;
+  }
+
+  .cactus-image1,
+  .cactus-image2,
+  .cactus-image3 {
+    bottom: 26px;
+    width: 20px;
+    height: 30px;
+  }
+
+  .message {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .start-btn {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
 }

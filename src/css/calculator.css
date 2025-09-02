@@ -96,7 +96,7 @@ input::placeholder {
   box-shadow: none;
 }
 
-/* Планшети: 481px – 768px */
+
 @media (max-width: 768px) and (min-width: 481px) {
   .inputs-row {
     flex-direction: column;
@@ -120,7 +120,7 @@ input::placeholder {
   }
 }
 
-/* Мобільні: до 480px */
+
 @media (max-width: 480px) {
   h1 {
     font-size: 14px;
