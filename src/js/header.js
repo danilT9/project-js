@@ -13,6 +13,9 @@ const filterMenuModalWindow = document.getElementById("filter-menu-modal-window"
 const gameInt = document.getElementById("game-int");
 const gameGame = document.getElementById("game-game");
 const gameExploratory = document.getElementById("game-exploratory");
+const gameIntMobile = document.getElementById("game-int-mobile");
+const gameGameMobile = document.getElementById("game-game-mobile");
+const gameExploratoryMobile = document.getElementById("game-exploratory-mobile");
 const scientistsAction = document.getElementById("scientists-action");
 
 
@@ -61,7 +64,7 @@ gameInt.addEventListener("click", () => {
     gameGame.style.background = "none";
     gameExploratory.style.background = "none";
     gameInt.style.width = "100%";
-    gameInt.style.height = "100%";
+    gameInt.style.height = "50%";
     gamesFilter.classList.toggle("hidden");
     intSections.forEach((sec) => {
         sec.style.display = "flex"
@@ -78,7 +81,7 @@ gameGame.addEventListener("click", () => {
     gameGame.style.background = "#A7A7A7";
     gameExploratory.style.background = "none";
     gameGame.style.width = "100%";
-    gameGame.style.height = "100%";
+    gameGame.style.height = "50%";
     gamesFilter.classList.toggle("hidden");
     intSections.forEach((sec) => {
         sec.style.display = "none"
@@ -95,7 +98,62 @@ gameExploratory.addEventListener("click", () => {
     gameGame.style.background = "none";
     gameExploratory.style.background = "#A7A7A7";
     gameExploratory.style.width = "100%";
-    gameExploratory.style.height = "100%";
+    gameExploratory.style.height = "50%";
+    gamesFilter.classList.toggle("hidden");
+    intSections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+    gameSections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+    exploratorySections.forEach((sec) => {
+        sec.style.display = "flex"
+    });
+});
+
+
+
+
+gameIntMobile.addEventListener("click", () => {
+    gameIntMobile.style.background = "#A7A7A7";
+    gameGameMobile.style.background = "none";
+    gameExploratoryMobile.style.background = "none";
+    gameIntMobile.style.width = "100%";
+    gameIntMobile.style.height = "50%";
+    gamesFilter.classList.toggle("hidden");
+    intSections.forEach((sec) => {
+        sec.style.display = "flex"
+    });
+    gameSections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+    exploratorySections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+});
+gameGameMobile.addEventListener("click", () => {
+    gameIntMobile.style.background = "none";
+    gameGameMobile.style.background = "#A7A7A7";
+    gameExploratoryMobile.style.background = "none";
+    gameGameMobile.style.width = "100%";
+    gameGameMobile.style.height = "50%";
+    gamesFilter.classList.toggle("hidden");
+    intSections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+    gameSections.forEach((sec) => {
+        sec.style.display = "flex"
+    });
+    exploratorySections.forEach((sec) => {
+        sec.style.display = "none"
+    });
+});
+gameExploratoryMobile.addEventListener("click", () => {
+    gameIntMobile.style.background = "none";
+    gameGameMobile.style.background = "none";
+    gameExploratoryMobile.style.background = "#A7A7A7";
+    gameExploratoryMobile.style.width = "100%";
+    gameExploratoryMobile.style.height = "50%";
     gamesFilter.classList.toggle("hidden");
     intSections.forEach((sec) => {
         sec.style.display = "none"
