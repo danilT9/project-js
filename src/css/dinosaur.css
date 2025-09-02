@@ -18,17 +18,26 @@
   text-align: left;
 }
 
+.game-field {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+
 .ground-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  z-index: 1;
 }
 
 .dino-image {
   position: absolute;
-  bottom: 60px;
-  left: 5%;
-  width: 8%;
-  max-width: 60px;
+  bottom: 50px;
+  left: 17%;
+  width: 55px;
   z-index: 2;
 }
 
@@ -37,21 +46,10 @@
 .cactus-image3 {
   display: none;
   position: absolute;
-  bottom: 0;
-  width: 5%;
+  bottom: 50px;
+  width: 30px;
+  height: 42px;
   z-index: 2;
-}
-
-.cactus-image1 {
-  left: 70%;
-}
-
-.cactus-image2 {
-  left: 50%;
-}
-
-.cactus-image3 {
-  left: 30%;
 }
 
 .message {
@@ -60,27 +58,98 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 14px;
   color: #cc0000;
-  font-weight: bold;
+  font-weight: 500;
   padding: 10px 20px;
-  border: 2px solid #cc0000;
-  border-radius: 8px;
+  border: 1px solid #cc0000;
+  border-radius: 5px;
   font-family: 'Montserrat Alternates', sans-serif;
   z-index: 999;
+}
+
+.start-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
 }
 
 
 @media (max-width: 768px) {
   .h1 {
     font-size: 14px;
-    margin: 30px 0;
+    padding: 24px 0;
+  }
+
+  .game-field {
+    height: 200px;
+  }
+
+  .dino-image {
+    bottom: 30px;
+    width: 45px;
+    left: 16%;
+  }
+
+  .cactus-image1,
+  .cactus-image2,
+  .cactus-image3 {
+    bottom: 30px;
+    width: 25px;
+    height: 38px;
+  }
+
+  .message {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .start-btn {
+    font-size: 11px;
+    padding: 8px 16px;
   }
 }
+
 
 @media (max-width: 480px) {
   .h1 {
     font-size: 12px;
-    margin: 25px 0;
+    padding: 16px 0;
+  }
+
+  .game-field {
+    height: 160px;
+  }
+
+  .dino-image {
+    bottom: 26px;
+    width: 37px;
+    left: 15%;
+  }
+
+  .cactus-image1,
+  .cactus-image2,
+  .cactus-image3 {
+    bottom: 26px;
+    width: 20px;
+    height: 30px;
+  }
+
+  .message {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .start-btn {
+    font-size: 10px;
+    padding: 6px 12px;
   }
 }
