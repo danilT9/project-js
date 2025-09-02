@@ -43,13 +43,14 @@ themeButton.addEventListener("change", () => {
     scientistsAction.classList.toggle("dark", themeButton.checked);
 });
 
-
+filterMenuModalWindow.style.display = "none";
 filterMenu.addEventListener("click", () => {
     filterMenuModal.classList.toggle("show");
-    filterMenuModalWindow.classList.toggle("show");
+    filterMenuModalWindow.style.display = "flex";
 });
 filterMenuModal.addEventListener("click", () => {
     filterMenuModal.classList.remove("show");
+    filterMenuModalWindow.style.display = "none";
 });
 
 
