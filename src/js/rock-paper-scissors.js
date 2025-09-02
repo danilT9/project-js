@@ -22,9 +22,9 @@ comp_score.textContent = scoreComp;
 let playerChoice = null;
 let compChoice = null;
 const images = [
-  'img/symbol-defs.svg#stone',
-  'img/symbol-defs.svg#scissors',
-  'img/symbol-defs.svg#paper',
+  './img/symbol-defs.svg#stone',
+  './img/symbol-defs.svg#scissors',
+  './img/symbol-defs.svg#paper',
 ];
 
 function selectPlayer(choice) {
