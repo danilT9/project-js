@@ -1,5 +1,9 @@
 /* Загальний код */
 
+body {
+    padding-top: 60px;
+}
+
 header ul {
     display: flex;
     flex-direction: row;

@@ -67,7 +67,7 @@ gameInt.addEventListener("click", () => {
     gameInt.style.height = "50%";
     gamesFilter.classList.toggle("hidden");
     intSections.forEach((sec) => {
-        sec.style.display = "flex"
+        sec.style.display = ""
     });
     gameSections.forEach((sec) => {
         sec.style.display = "none"
@@ -87,7 +87,7 @@ gameGame.addEventListener("click", () => {
         sec.style.display = "none"
     });
     gameSections.forEach((sec) => {
-        sec.style.display = "flex"
+        sec.style.display = ""
     });
     exploratorySections.forEach((sec) => {
         sec.style.display = "none"
@@ -162,6 +162,6 @@ gameExploratoryMobile.addEventListener("click", () => {
         sec.style.display = "none"
     });
     exploratorySections.forEach((sec) => {
-        sec.style.display = "flex"
+        sec.style.display = ""
     });
 });

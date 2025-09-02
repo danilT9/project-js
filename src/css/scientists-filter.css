@@ -1,4 +1,6 @@
 #scientists-action {
+    background: white;
+    color: #373737;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -7,11 +9,15 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+} #scientists-action h2 {
+    color: #373737;
+} #scientists-action.dark h2 {
     color: white;
 } #scientists-action.dark {
     background: #373737;
     color: white;
 }
+
 
 #scientists {
     display: flex;
@@ -22,26 +28,27 @@
     max-width: 500px;
     gap: 20px;
 } #scientists button {
-    background: #474747;
+    background: #373737;
+    color: white;
     border: none;
     width: 100px;
     height: 100px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 3px 3px 3px #ffffff;
-    color: #373737;
     font-size: 12px;
 } #scientists-action.dark #scientists button {
-    background: #474747;
+    background: white;
     border: none;
     width: 100px;
     height: 100px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px #ffffff;
-    color: #ffffff;
+    box-shadow: 3px 3px 3px #373737;
+    color: #373737;
     font-size: 12px;
 }
+
 
 #scientists-buttons {
     display: flex;
@@ -49,6 +56,7 @@
     justify-content: center;
     max-width: 950px;
     gap: 20px;
+    color: #373737;
 } #scientists-buttons button {
     background: #373737;
     color: white;
@@ -68,14 +76,19 @@
     font-size: 14px;
     box-shadow: 3px 3px 3px #7a7a7a;
 } #scientists-buttons button:hover {
-    background: #fdfdfd;
+    color: white;
+    background: rgb(65, 65, 65);
 } #scientists-buttons button:active {
-    background: #fbfbfb;
+    color: white;
+    background: rgb(75, 75, 75);
 } #scientists-action.dark #scientists-buttons button:hover {
+    color: #373737;
     background: rgb(227, 227, 227);
 } #scientists-action.dark #scientists-buttons button:active {
+    color: #474747;
     background: rgb(207, 207, 207);
 }
+
 
 @media (min-width: 360px) and (max-width: 800px) {
     #scientists-buttons button {
