@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/games-team-project/assets/index-ae969640.js"></script>
-    <link rel="stylesheet" href="/games-team-project/assets/index-26ae8b3c.css">
+    <script type="module" crossorigin src="/games-team-project/assets/index-9cb10444.js"></script>
+    <link rel="stylesheet" href="/games-team-project/assets/index-0fa39e7b.css">
   </head>
   <body>
     <header>
@@ -73,7 +73,7 @@
       />
       <button class="birthday_search_btn">
         <svg class="icon">
-          <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+          <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
         </svg>
       </button>
     </div>
@@ -94,7 +94,7 @@
         />
         <button class="number_guess_search_btn">
           <svg class="icon">
-            <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+            <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
           </svg>
         </button>
       </div>
@@ -117,21 +117,21 @@
             <li>
               <button>
                 <svg class="stone">
-                  <use href="/games-team-project/assets/symbol-defs-226f0714.svg#stone"></use>
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#stone"></use>
                 </svg>
               </button>
             </li>
             <li>
               <button>
                 <svg class="scissors">
-                  <use href="/games-team-project/assets/symbol-defs-226f0714.svg#scissors"></use>
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#scissors"></use>
                 </svg>
               </button>
             </li>
             <li>
               <button>
                 <svg class="paper">
-                  <use href="/games-team-project/assets/symbol-defs-226f0714.svg#paper"></use>
+                  <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#paper"></use>
                 </svg>
               </button>
             </li>
@@ -173,17 +173,17 @@
       </div>
 
       <div class="buttons-group">
-        <button class="circle-btn" onclick="setOperation('+')">+</button>
-        <button class="circle-btn" onclick="setOperation('*')">*</button>
-        <button class="circle-btn" onclick="setOperation('-')">-</button>
-        <button class="circle-btn" onclick="setOperation('/')">/</button>
+        <button class="circle-btn">+</button>
+        <button class="circle-btn">*</button>
+        <button class="circle-btn">-</button>
+        <button class="circle-btn">/</button>
       </div>
 
       <div class="input-wrapper shadow-input">
         <input id="num2" type="text" placeholder="Введіть число" />
       </div>
 
-      <button class="circle-btn" onclick="calculateResult()">=</button>
+      <button class="circle-btn" id="equals">=</button>
 
       <div class="input-wrapper shadow-input result-input">
         <input id="result" type="text" placeholder="Результат" readonly />
@@ -191,60 +191,6 @@
     </div>
   </div>
 </section>
-<script>
-  let operation = null;
-
-  function setOperation(op) {
-    operation = op;
-  }
-
-  function calculateResult() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const resultInput = document.getElementById('result');
-
-    if (isNaN(num1) || isNaN(num2)) {
-      resultInput.value = 'Введіть правильні числа';
-      return;
-    }
-
-    if (!operation) {
-      resultInput.value = 'Оберіть операцію';
-      return;
-    }
-
-    let result;
-    let operationText;
-
-    switch (operation) {
-      case '+':
-        result = num1 + num2;
-        operationText = `${num1} + ${num2} = ${result}`;
-        break;
-      case '-':
-        result = num1 - num2;
-        operationText = `${num1} - ${num2} = ${result}`;
-        break;
-      case '*':
-        result = num1 * num2;
-        operationText = `${num1} * ${num2} = ${result}`;
-        break;
-      case '/':
-        if (num2 === 0) {
-          resultInput.value = 'Ділення на 0 неможливе';
-          return;
-        }
-        result = num1 / num2;
-        operationText = `${num1} / ${num2} = ${result}`;
-        break;
-      default:
-        resultInput.value = 'Невідома операція';
-        return;
-    }
-
-    resultInput.value = operationText;
-  }
-</script>
 
     <section class="timecalc-section">
   <div class="timecalc-centered">
@@ -256,9 +202,9 @@
           id="timecalc-minutesInput"
           placeholder="Введіть число"
         />
-        <div class="timecalc-search-button" onclick="convertTimecalcMinutes()">
+        <div class="timecalc-search-button" id="timecalc-button">
           <svg class="icon">
-            <use href="/games-team-project/assets/symbol-defs-226f0714.svg#magnifying-glass"></use>
+            <use href="/games-team-project/assets/symbol-defs-a9fac166.svg#magnifying-glass"></use>
           </svg>
         </div>
       </div>
@@ -267,61 +213,27 @@
     </div>
   </div>
 </section>
-<script>
-  function convertTimecalcMinutes() {
-    const input = document.getElementById('timecalc-minutesInput').value.trim();
-    const minutesTotal = parseInt(input, 10);
-
-    if (isNaN(minutesTotal) || minutesTotal < 0) {
-      document.getElementById('timecalc-result').textContent =
-        'Некоректне значення';
-      return;
-    }
-
-    const days = Math.floor(minutesTotal / 1440);
-    const hours = Math.floor((minutesTotal % 1440) / 60);
-    const minutes = minutesTotal % 60;
-
-    let result = '';
-
-    if (days > 0) {
-      result += `${days} дн. `;
-    }
-
-    const paddedHours = hours.toString().padStart(1, '0');
-    const paddedMinutes = minutes.toString().padStart(2, '0');
-
-    result += `${paddedHours}:${paddedMinutes}`;
-
-    document.getElementById('timecalc-result').textContent = result;
-  }
-</script>
 
     <section>
   <div class="dino-container">
     <h1 class="h1">Google динозавр</h1>
-
     <div class="game-field">
       <img src="/games-team-project/assets/dino-google-338feca7.png" alt="Dino" class="dino-image" />
-
       <img
-        src="/games-team-project/assets/google-ground-8195c91f.png"
+        src="/games-team-project/assets/google-ground-65207b8e.png"
         alt="Ground"
         class="ground-image"
       />
-
       <img
         src="/games-team-project/assets/google-cactus-df18550e.png"
         alt="Cactus"
         class="cactus-image1"
       />
-
       <img
         src="/games-team-project/assets/google-cactus-df18550e.png"
         alt="Cactus"
         class="cactus-image2"
       />
-
       <img
         src="/games-team-project/assets/google-cactus-df18550e.png"
         alt="Cactus"
@@ -329,106 +241,9 @@
       />
       <div class="message" id="message">Ви програли</div>
     </div>
+    <button class="start-btn" id="startBtn">Почати гру</button>
   </div>
 </section>
-
-<script>
-  window.onload = function () {
-    const dino = document.querySelector('.dino-image');
-    const message = document.getElementById('message');
-    const cactusList = [
-      document.querySelector('.cactus-image1'),
-      document.querySelector('.cactus-image2'),
-      document.querySelector('.cactus-image3'),
-    ];
-
-    let positionLeft = 150;
-    let positionBottom = 55;
-
-    const minBottom = 55;
-    const maxBottom = 200;
-
-    function moveLeft() {
-      if (positionLeft > 0) {
-        positionLeft -= 10;
-        dino.style.left = positionLeft + 'px';
-        checkCollision();
-      }
-    }
-
-    function moveRight() {
-      if (positionLeft < window.innerWidth - 60) {
-        positionLeft += 10;
-        dino.style.left = positionLeft + 'px';
-        checkCollision();
-      }
-    }
-
-    function moveUp() {
-      if (positionBottom < maxBottom) {
-        positionBottom += 10;
-        dino.style.bottom = positionBottom + 'px';
-        checkCollision();
-      }
-    }
-
-    function moveDown() {
-      if (positionBottom > minBottom) {
-        positionBottom -= 10;
-        dino.style.bottom = positionBottom + 'px';
-        checkCollision();
-      }
-    }
-
-    function checkCollision() {
-      const dinoRect = dino.getBoundingClientRect();
-
-      for (const cactus of cactusList) {
-        const cactusRect = cactus.getBoundingClientRect();
-
-        const isColliding = !(
-          dinoRect.right < cactusRect.left ||
-          dinoRect.left > cactusRect.right ||
-          dinoRect.bottom < cactusRect.top ||
-          dinoRect.top > cactusRect.bottom
-        );
-
-        if (isColliding) {
-          message.style.display = 'block';
-          return;
-        }
-      }
-
-      // якщо не зіткнувся — ховаємо повідомлення
-      message.style.display = 'none';
-    }
-
-    document.addEventListener('keydown', function (e) {
-      const key = e.key.toLowerCase();
-
-      switch (key) {
-        case 'w':
-          moveUp();
-          break;
-        case 's':
-          moveDown();
-          break;
-        case 'a':
-          moveLeft();
-          break;
-        case 'd':
-          moveRight();
-          break;
-      }
-    });
-
-    // Початкові стилі
-    dino.style.left = positionLeft + 'px';
-    dino.style.bottom = positionBottom + 'px';
-    message.style.display = 'none';
-  };
-</script>
-
     <section class="football">
   <h2 class="title">Футбол</h2>
   <div class="field">
