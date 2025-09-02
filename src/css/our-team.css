@@ -1,7 +1,15 @@
-.our-team {
-  border-top: 1.5px solid black;
-  border-bottom: 1.5px solid black;
+.team-section {
+  position: relative;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+.team-section::before,
+.team-section::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: black;
   margin: 0 auto;
 }
 
